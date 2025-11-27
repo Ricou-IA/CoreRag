@@ -112,9 +112,9 @@ export async function callRagBrain(query, verticalId, options = {}) {
 
     return { 
       data: {
-        answer: data.answer,
+        answer: data.response || data.answer,
         sources: data.sources || [],
-        processingTime: data.processing_time_ms
+        processingTime: data.processing_time_ms || data.metadata?.processing_time_ms
       }, 
       error: null 
     }

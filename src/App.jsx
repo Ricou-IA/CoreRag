@@ -1,25 +1,17 @@
-/**
- * App.jsx - Core RAG Engine
- * ============================================================================
- * Point d'entrée de l'application React.
- * Configure le Router et les Guards de protection des routes.
- * ============================================================================
- */
-
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { AuthProvider } from './contexts/AuthContext'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
 import { 
   ProtectedRoute, 
   OnboardingRoute, 
   PublicRoute 
-} from './components/OnboardingGuard'
+} from './components/OnboardingGuard';
 
 // Pages
-import Login from './pages/Login'
-import ResetPassword from './pages/ResetPassword'
-import Onboarding from './pages/Onboarding'
-import Dashboard from './pages/Dashboard'
-import Settings from './pages/Settings'
+import Login from './pages/Login';
+import ResetPassword from './pages/ResetPassword';
+import Onboarding from './pages/Onboarding';
+import Dashboard from './pages/Dashboard';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -84,7 +76,7 @@ function App() {
         </Routes>
       </AuthProvider>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

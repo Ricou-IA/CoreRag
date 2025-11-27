@@ -34,9 +34,63 @@ export default {
           900: '#0f172a',
           950: '#020617',
         },
+        // Couleurs brand pour les composants chat (Brique 3)
+        brand: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      // Animations pour les composants chat (Brique 3)
+      animation: {
+        'fadeIn': 'fadeIn 0.3s ease-out forwards',
+        'fadeInUp': 'fadeInUp 0.4s ease-out forwards',
+        'bounce': 'bounce 1s infinite',
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'slideDown': 'slideDown 0.3s ease-out forwards',
+        'slideUp': 'slideUp 0.3s ease-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { opacity: '0', maxHeight: '0' },
+          '100%': { opacity: '1', maxHeight: '500px' },
+        },
+        slideUp: {
+          '0%': { opacity: '1', maxHeight: '500px' },
+          '100%': { opacity: '0', maxHeight: '0' },
+        },
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
+      },
+      boxShadow: {
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)',
       },
     },
   },
